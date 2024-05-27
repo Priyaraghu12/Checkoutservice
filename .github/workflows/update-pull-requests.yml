@@ -1,0 +1,42 @@
+name: Update Port PR Count
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+jobs:
+  update-pull-request-count:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Get repository name
+        id: get_repo_name
+        run: |
+          REPO_NAME=$(echo "${{ github.repository }}" | cut -d'/' -f2)
+          echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
+
+      - name: Get pull request count
+        id: pr_count
+        run: |
+          PR_COUNT=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+          "https://api.github.com/repos/${{ github.repository }}/pulls?state=all" | jq '. | length')
+          echo "PR_COUNT=$PR_COUNT" >> $GITHUB_ENV
+
+      - name: Print pull request count
+        run: |
+          echo "Pull Request Count: $PR_COUNT"
+          echo "Pull Request Count: ${{ env.PR_COUNT }}"
+
+      - name: Update Port Entity
+        uses: port-labs/port-github-action@v1
+        with:
+          blueprint: "service"
+          identifier: ${{ env.REPO_NAME }}
+          clientId: ${{ secrets.PORT_CLIENT_ID }}
+          clientSecret: ${{ secrets.PORT_CLIENT_SECRET }}
+          operation: UPSERT
+          properties: '{"p_rcount_githubupdate": ${{ env.PR_COUNT }}}'
