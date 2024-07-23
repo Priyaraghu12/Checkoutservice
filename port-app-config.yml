@@ -18,22 +18,6 @@ resources:
           relations:
             topic: ".topics"
             githubTeams: "[.teams[].id | tostring]"
-  - kind: team
-    selector:
-      query: "true" # JQ boolean query. If evaluated to false - skip syncing the object.
-    port:
-      entity:
-        mappings:
-          identifier: ".id | tostring"
-          title: .name
-          blueprint: '"githubTeam"'
-          properties:
-            name: .name
-            slug: .slug
-            description: .description
-            link: .html_url
-            permission: .permission
-            notification-setting: .notification_setting
   - kind: tag
     selector:
       query: "true" #'.repo.name == "monorepo2"'
