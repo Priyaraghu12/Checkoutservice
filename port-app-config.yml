@@ -1,0 +1,72 @@
+createMissingRelatedEntities: true
+resources:
+  - kind: repository
+    selector:
+      query: "true" # JQ boolean query. If evaluated to false - skip syncing the object.
+    port:
+      entity:
+        mappings:
+          identifier: ".name" # The Entity identifier will be the repository name.
+          title: ".name"
+          blueprint: '"repo"'
+          properties:
+            url: ".html_url"
+            description: ".description"
+            topics: ".topics"
+            visibility: ".visibility"
+            default-branch: ".default_branch"
+          relations:
+            topic: ".topics"
+            githubTeams: "[.teams[].id | tostring]"
+  - kind: team
+    selector:
+      query: "true" # JQ boolean query. If evaluated to false - skip syncing the object.
+    port:
+      entity:
+        mappings:
+          identifier: ".id | tostring"
+          title: .name
+          blueprint: '"githubTeam"'
+          properties:
+            name: .name
+            slug: .slug
+            description: .description
+            link: .html_url
+            permission: .permission
+            notification-setting: .notification_setting
+  - kind: tag
+    selector:
+      query: "true" #'.repo.name == "monorepo2"'
+    port:
+      entity:
+        mappings:
+          identifier: .tag.name
+          title: .tag.name
+          blueprint: '"tag"'
+          properties:
+            commit-sha: .commit.sha
+          relations:
+            repository: .repo.name
+  - kind: repository
+    selector:
+      query: .topics[0] == 'connectors'
+    port:
+      entity:
+        mappings:
+          identifier: .name
+          title: .name
+          blueprint: '"connector"'
+          properties: {}
+          relations:
+            connector-repository: .name
+  - kind: tag
+    selector:
+      query: ".repo.name | contains('connectors')"
+    port:
+      entity:
+        mappings:
+          identifier: .tag.name
+          blueprint: '"tag"'
+          properties: {}
+          relations:
+            connector: .repo.name
