@@ -11,4 +11,4 @@ COPY . /app
 EXPOSE 4000
 
 # Run the command to start the web server
-CMD ["python", "-m", "http.server", "8000"]
+CMD ["python", "-m", "http.server", "9000"]
