@@ -3,7 +3,7 @@
 - identifier: "Checkoutservice"
   blueprint: service
   properties:
-    type: "frontend"
+    type: "frontend1"
     lifecycle: "Experimenta"
   relations:
     domain: "shipping"
