@@ -4,6 +4,4 @@
   blueprint: service
   properties:
     type: "frontend1"
-    lifecycle: "Experimenta"
-  relations:
-    domain: "shipping"
+    lifecycle: "Experimentcheckout"
