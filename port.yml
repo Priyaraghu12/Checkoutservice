@@ -4,4 +4,4 @@
   blueprint: service
   properties:
     type: "frontend22"
-    lifecycle: "Experimentcheckout22"
+    lifecycle: "Experimentcheckout23"
