@@ -3,5 +3,5 @@
 - identifier: ".repo"
 blueprint: service
   properties:
-    type: "frontend21"
+    type: "frontend20"
     lifecycle: "Experimentcheckout24"
