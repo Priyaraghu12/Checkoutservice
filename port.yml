@@ -1,7 +1,7 @@
 # enrichService.yml
 
 - identifier: "Checkoutservice"
-blueprint: service
+  blueprint: service
   properties:
-    type: "frontend21"
+    type: "frontend22"
     lifecycle: "Experimentcheckout24"
