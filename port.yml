@@ -3,5 +3,5 @@
 - identifier: "Checkoutservice"
 blueprint: service
   properties:
-    type: "frontend20"
+    type: "frontend21"
     lifecycle: "Experimentcheckout24"
