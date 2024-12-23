@@ -1,6 +1,6 @@
 # enrichService.yml
 
-- identifier: ".repo"
+- identifier: "Checkoutservice"
 blueprint: service
   properties:
     type: "frontend20"
