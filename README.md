@@ -4,7 +4,7 @@ General extensions for Azure Pipelines for internal SPS Commerce custom tasks. T
 
 ### Current version
 
-- Agent version to target: 3.218.1
+- Agent version to target: 3.218.0
 - Node version to target: Node 16
 
 ## Tasks
