@@ -5,5 +5,5 @@
   properties:
     type: "frontend27"
     lifecycle: "Experimentcheckout20"
-    team: [service_team]
+    team: [new team]
     language: java
