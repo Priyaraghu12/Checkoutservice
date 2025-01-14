@@ -5,6 +5,6 @@
   properties:
     type: "frontend27"
     lifecycle: "Experimentcheckout20"
-    team: [new team]
+    team: [port_admins]
     language: java
     tier: "Mission Critical"
