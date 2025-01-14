@@ -1,6 +1,6 @@
 # enrichService.yml
 
-- identifier: "Checkoutservice"
+- identifier: "kubernetes"
   blueprint: service
   properties:
     type: "frontend27"
