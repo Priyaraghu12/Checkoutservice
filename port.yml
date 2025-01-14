@@ -4,5 +4,5 @@
   blueprint: service
   properties:
     type: "frontend27"
-    lifecycle: "Experimentcheckout20"
+    lifecycle: "Experimentcheckout21"
     language: java
