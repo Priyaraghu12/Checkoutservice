@@ -3,7 +3,7 @@
 - identifier: "kubernetes"
   blueprint: service
   properties:
-    type: "frontend27"
+    type: "frontend20"
     lifecycle: "Experimentcheckout20"
     team: [port_admins]
     language: java
