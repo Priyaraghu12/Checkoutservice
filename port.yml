@@ -3,8 +3,8 @@
 - identifier: "Checkoutservice"
   blueprint: service
   properties:
-    type: "frontend20"
-    lifecycle: "Experimentcheckout21"
+    type: "frontend22"
+    lifecycle: "Experimentcheckout24"
     team: [port_admins]
     language: java
     tier: "Mission Critical"
