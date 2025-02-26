@@ -7,6 +7,7 @@
     lifecycle: "Experimentcheckout24"
     team: [port_admins]
     language: java
+    url: "https://google.com"
     tier: "Mission Critical"
   relations:
     impactedcal: core3_service5
