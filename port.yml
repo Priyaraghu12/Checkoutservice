@@ -1,9 +1,9 @@
 # enrichService.yml
 
-identifier: "Checkoutservice"
+- identifier: "Checkoutservice"
   blueprint: service
   properties:
-    type: "frontend22"
+    type: "frontend12"
     lifecycle: "Experimentcheckout24"
     team: [port_admins]
     language: java
