@@ -10,4 +10,4 @@
     url: "https://google.com"
     tier: "Mission Critical"
   relations:
-    impactedcal: core3_service5
+    impactedcal: core3_service6
