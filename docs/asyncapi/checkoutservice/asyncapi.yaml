@@ -12,7 +12,7 @@ servers:
 channels:
   checkoutservice/events:
     subscribe:
-      summary: Receive checkout event updates
+      summary: Receive checkout event updates now
       message:
         payload:
           type: object
