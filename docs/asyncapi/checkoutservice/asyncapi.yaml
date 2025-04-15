@@ -1,0 +1,23 @@
+asyncapi: '2.6.0'
+info:
+  title: Checkoutservice Events API
+  version: '1.0.0'
+  description: This spec defines the async events for the Checkoutservice.
+
+servers:
+  production:
+    url: mqtt://broker.example.com
+    protocol: mqtt
+
+channels:
+  checkoutservice/events:
+    subscribe:
+      summary: Receive checkout event updates
+      message:
+        payload:
+          type: object
+          properties:
+            orderId:
+              type: string
+            status:
+              type: string
