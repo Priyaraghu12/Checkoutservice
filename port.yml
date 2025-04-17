@@ -1,10 +1,11 @@
 # enrichService.yml
 
-- identifier: amwins-ascs-amlink-client-api
+- identifier: amwins-ascs-amlink-client-manual
   title: ASCS Amlink Client API
   blueprint: repo
   icon: CSharp
   properties:
     company: Amwins
   relations:
-    service: Amwins/ascs1
+    service: Amwins/ascs2
+    repo: amwins-ascs-amlink-client-api
