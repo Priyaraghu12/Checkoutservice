@@ -1,7 +1,7 @@
 # enrichService.yml
 
-- identifier: amwins-ascs-priya
-  title: priya-test
+- identifier: test_fincorp
+  title: priya-test1
   blueprint: service
   icon: CSharp
   properties:
