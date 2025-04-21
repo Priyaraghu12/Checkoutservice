@@ -1,11 +1,8 @@
 # enrichService.yml
 
-- identifier: amwins-ascs
-  title: ASCS Amlink Client API2
-  blueprint: repo
+- identifier: amwins-ascs-priya
+  title: priya-test
+  blueprint: service
   icon: CSharp
   properties:
-    company: Amwins
-  relations:
-    service: Amwins/ascs56
-    repo: hello
+    lifecycle: Amwins
